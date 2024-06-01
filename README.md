@@ -2,7 +2,7 @@
 
 Just a 1 hour test with ChatGPT, starting from 0 knowledge on how python and HA integration work, to try to create a Home Assistant Integration compatible with [HACS](https://hacs.xyz/), using the [decode-status.py](https://github.com/arendst/Tasmota/discussions/17992) script by Theo Arends and Jacek Ziolkowski.
 
-Add this repository as custom HACS one, then add these entities to your `configuration.yaml`
+Add this repository as custom HACS one, then search for it in HACS and install it, and then add these entities to your `configuration.yaml`
 
     tasmota_decoder:
 
