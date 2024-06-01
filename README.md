@@ -103,34 +103,35 @@ and these automations to your `automations.yaml`
 
 finally add a new panel view to your dashboard (go in raw edit and add this at the end of the yaml):
 
-    - type: panel
-      title: Tasmota
-      path: tasmota
-      cards:
-        - type: vertical-stack
-          cards:
-            - type: horizontal-stack
-              cards:
-              - type: entities
-                entities:
-                  - input_select.device_dropdown
-              - show_name: true
-                show_icon: false
-                type: button
-                tap_action:
-                  action: call-service
-                  service: input_boolean.turn_on
-                  data: {}
-                  target:
-                    entity_id: input_boolean.tasmota_decoder_trigger
-                name: Decode Tasmota
-                icon: mdi:lock-remove-outline
-        - type: markdown
-          content: |-
-            {% set full_output = state_attr('sensor.tasmota_script_output',
-                'full_output') %}
+      - type: panel
+        title: Tasmota
+        path: tasmota
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: entities
+                    entities:
+                      - input_select.device_dropdown
+                  - show_name: true
+                    show_icon: false
+                    type: button
+                    tap_action:
+                      action: call-service
+                      service: input_boolean.turn_on
+                      data: {}
+                      target:
+                        entity_id: input_boolean.tasmota_decoder_trigger
+                    name: Decode Tasmota
+                    icon: mdi:lock-remove-outline
+              - type: markdown
+                content: |-
+                  {% set full_output = state_attr('sensor.tasmota_script_output',
+                      'full_output') %}
 
-            {% if full_output %} ## Tasmota Script Output {{ full_output }} {%
-                else %} No output available. {% endif %}
+                  {% if full_output %} ## Tasmota Script Output {{ full_output }} {%
+                      else %} No output available. {% endif %}
+
 
 check your configuration, and restart Home Assistant. The automations will search for new tasmota devices via mqtt every minute, adding them to the dropdown box.
