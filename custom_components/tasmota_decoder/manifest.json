@@ -1,0 +1,9 @@
+{
+    "domain": "tasmota_decoder",
+    "name": "Tasmota Decoder",
+    "version": "1.0",
+    "documentation": "https://github.com/arendst/Tasmota/discussions/17992",
+    "dependencies": [],
+    "codeowners": [],
+    "requirements": []
+}

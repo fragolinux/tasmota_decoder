@@ -1,0 +1,6 @@
+run_script:
+  description: "Run the custom Python script with an IP address"
+  fields:
+    ip_address:
+      description: "The IP address of the device"
+      example: "192.168.1.48"

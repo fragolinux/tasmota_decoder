@@ -1,0 +1,7 @@
+{
+    "name": "Tasmota Decoder",
+    "content_in_root": false,
+    "zip_release": false,
+    "render_readme": true,
+    "country": "US"
+}
