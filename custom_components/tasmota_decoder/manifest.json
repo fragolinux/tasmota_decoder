@@ -1,9 +1,12 @@
 {
-    "domain": "tasmota_decoder",
-    "name": "Tasmota Decoder",
-    "version": "1.0",
-    "documentation": "https://github.com/arendst/Tasmota/discussions/17992",
-    "dependencies": [],
-    "codeowners": [],
-    "requirements": []
+  "domain": "tasmota_decoder",
+  "name": "Tasmota Decoder",
+  "integration_type": "service",
+  "documentation": "https://github.com/fragolinux/tasmota_decoder",
+  "issue_tracker": "https://github.com/fragolinux/tasmota_decoder/issues",
+  "dependencies": [],
+  "codeowners": ["@fragolinux"],
+  "requirements": ["requests"],
+  "iot_class": "local_polling",
+  "version": "1.1.0"
 }

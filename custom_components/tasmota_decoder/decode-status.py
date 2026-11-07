@@ -121,7 +121,7 @@ a_setoption = [[
     "(Tuya) Enable (1) TuyaMcuReceived messages over Mqtt",
     "(Buzzer) Enable (1) buzzer when available",
     "(Light) Enable multi-channels PWM (1) instead of Color PWM (0)",
-    "(not used) Limits Tuya dimmers to minimum of 10% (25) when enabled",
+    "(Serial) Invert Serial receive on SerialBridge (1)",
     "(Energy) Enable Weekend Energy Tariff",
     "(DDS2382) Select different Modbus registers (1) for Active Energy (#6531)",
     "(Energy) Enable (1) hardware energy total counter as reference (#6561)",
@@ -215,8 +215,12 @@ a_setoption = [[
     "(NeoPool) Output sensitive data (1)",
     "(MQTT) Disable publish ModbusReceived MQTT messages (1), you must use event trigger rules instead",
     "(Counter) Enable counting on both rising and falling edge (1)",
-    "","",
-    "","","","",
+    "(LD2410) Disable generate moving event by sensor report - use LD2410 out pin for events (1)",
+    "(GUI) Disable display of state text (1)",
+    "(Energy) Do not add export energy to energy today (1)",
+    "(GUI) Disable display of GUI device name (1)",
+    "(WizMote) Enable WiZ Smart Remote support (1)",
+    "(TLS) Enable ECDSA validation in addition to RSA",
     "","","","",
     "","","","",
     "","","",""
@@ -305,11 +309,11 @@ a_features = [[
     "USE_HC8","USE_HDMI_CEC","USE_BLE_ESP32","USE_MATTER_DEVICE"
     ],[
     "USE_MAGIC_SWITCH","USE_PIPSOLAR","USE_GPIO_VIEWER","USE_AMSX915",
-    "USE_SPI_LORA","","","",
-    "","","","",
-    "","","","",
-    "","","","",
-    "","","","",
+    "USE_SPI_LORA","USE_SPL06_007","USE_QMP6988","USE_WOOLIIS",
+    "USE_HX711_M5SCALES","USE_RX8010","USE_PCF85063","USE_ESP32_TWAI",
+    "USE_C8_CO2_5K","USE_WIZMOTE","USE_V9240","USE_TELNET",
+    "USE_XYZMODEM","USE_WIREGUARD","USE_AP33772S","USE_VID6608",
+    "USE_AGS02MA","USE_SEN6X","USE_FM24CXX","USE_STCC4",
     "","","","",
     "","","",""
     ]]
@@ -339,7 +343,7 @@ else:
         obj = json.load(fp)
 
 def StartDecode():
-    print ("\n*** decode-status.py v13.4.0.1 by Theo Arends and Jacek Ziolkowski ***")
+    print ("\n*** decode-status.py v15.3.0.1 by Theo Arends and Jacek Ziolkowski ***")
 
 #    print("Decoding\n{}".format(obj))
 

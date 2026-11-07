@@ -1,6 +1,15 @@
 run_script:
-  description: "Run the custom Python script with an IP address"
+  name: Decode device status
+  description: >-
+    Query a Tasmota device and decode its status report. The result is
+    published on sensor.tasmota_script_output.
   fields:
     ip_address:
-      description: "The IP address of the device"
+      name: IP address
+      description: >-
+        IP address of the Tasmota device. Must be a bare address, not a
+        hostname and not a template that can render as "unavailable".
+      required: true
       example: "192.168.1.48"
+      selector:
+        text:
